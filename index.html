@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Class Exercises</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            display: block;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        #courseLinks {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spanish Class Course </h1>
+        <ul id="exercise-list">
+            <!-- Exercise links will be added here -->
+             <li>
+            <a id="courseLinks" href="https://www.canva.com/design/DAGYqZ3Z2Vk/78ns3XGe60UR5_jAq2Fxaw/edit?utm_content=DAGYqZ3Z2Vk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Complete Course</a>    
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // Array of exercise objects
+        const exercises = [
+            { name: "Lesson 1", url: "https://www.canva.com/design/DAGYqZ3Z2Vk/eGL1dI98O9TfYyh1uU1IBQ/view?utm_content=DAGYqZ3Z2Vk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8c5d2e9afe" },
+            { name: "Lesson 2", url: "https://www.canva.com/design/DAGZj_y3-qU/HWDiediwjPFYeZJ4_LrznQ/view?utm_content=DAGZj_y3-qU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8caa150eeb" },
+            { name: "Lesson 3", url: "https://www.canva.com/design/DAGZkJ4TyH4/rGsw5OXs2CrfpI7Mw8rNCg/view?utm_content=DAGZkJ4TyH4&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h01b4d1a1fe" },
+            { name: "Lesson 4", url: "https://www.canva.com/design/DAGZkAskx4c/Zudx_QynlKaf-oTpG8h0-Q/view?utm_content=DAGZkAskx4c&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h71819f62b6" },
+
+        ];
+
+        // Function to create and append exercise links
+        function createExerciseLinks() {
+            const list = document.getElementById('exercise-list');
+            exercises.forEach(exercise => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = exercise.url;
+                a.textContent = exercise.name;
+                a.target = "_blank"; // Opens link in a new tab
+                li.appendChild(a);
+                list.appendChild(li);
+            });
+        }
+
+        // Call the function when the page loads
+        window.onload = createExerciseLinks;
+    </script>
+</body>
+</html>
+
